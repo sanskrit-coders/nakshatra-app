@@ -1,0 +1,180 @@
+<html>
+<body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help.</title>
+    <style>
+        body {
+            background: #fefdeb;
+            padding:0em;
+            color: #000000
+        }
+
+        .patra {
+            padding:0.7em;
+            max-width: 55.8em;
+            margin: 0 auto 0 auto;
+            font-family: "Lucida Sans Unicode", "nsr", "sans-serif";
+            font-size: 1.1em;
+            line-height: 1.5em;
+            word-spacing: ;
+        }
+
+        .salaha_pette {
+            margin-bottom: 2em;
+        }
+
+        .salaha_peru {
+            font-style: italic;
+            font-weight: 575;
+            padding-bottom: 0.3em;
+            border-bottom: 1px solid grey;
+            color: #333;
+        }
+
+        .salaha {
+            display: none;
+        }
+
+        .marchu_bomma {
+            float: right;
+            fill: grey;
+            stroke: grey;
+        }
+
+    </style>
+
+    <script>
+        function kindaMarchu(peru) {
+            imJ= peru.getElementsByClassName("marchu_bomma");
+            im= imJ[0];
+
+            vivaram= peru.nextElementSibling;
+            chupu= vivaram.style.display;
+            window.Js.logWebView("chupu: "+ chupu);
+
+            if(chupu.match("^$")) {
+                vivaram.style.display= "none";
+                chupu= vivaram.style.display;
+            }
+
+            if(chupu.match("block")) {
+                vivaram.style.display= "none";
+                im.innerHTML='<svg xmlns="http://www.w3.org/2000/svg" class="marchu_bomma" width="24" height="24" viewBox="0 0 24 24"><path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/></svg>';
+            }
+
+            else if(chupu.match("none")) {
+                vivaram.style.display= "block";
+                im.innerHTML='<svg xmlns="http://www.w3.org/2000/svg" class="marchu_bomma" width="24" height="24" viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>';
+            }
+        }
+
+
+        function okkateChupu(sankhya) {
+            salahalu= document.getElementsByClassName("salaha_pette");
+
+            for(i= 0; i< salahalu.length; i++) {
+                salahalu[i].style.display= "none";
+            }
+
+            prastuta= document.getElementById("sp"+sankhya);
+            prastuta.style.display= "block";
+
+            prastuta_vivaram= document.getElementById("s"+sankhya);
+            prastuta_vivaram.style.display= "block";
+
+        }
+
+
+    </script>
+
+
+</head>
+
+<div class="patra" id="patra">
+    <div class="salahalu" id="salahalu">
+
+        <div class="salaha_pette" id="sp9">
+            <div class="salaha_peru" id="spr9" onclick="kindaMarchu(this)"><svg xmlns="http://www.w3.org/2000/svg" class="marchu_bomma" width="24" height="24" viewBox="0 0 24 24"><path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/></svg>Dictionaries</div>
+            <div class="salaha" id="s9">
+                <p>Nakshtra supports stardict format. supports .syn file, and and dictzip compressed .dict.dz files too.</p>
+                <p>Keep your stardict dictionary files in dictdata/ folder. and launch app. then you will get screen with dictionaries to index. choose dictionaries you want to index, and proceed.</p>
+                <p>If you face any problems, try to reindex all dictionaries from preferances.</p>
+            </div>
+        </div>
+
+        <div class="salaha_pette" id="sp0">
+            <div class="salaha_peru" id="spr0" onclick="kindaMarchu(this)"><svg xmlns="http://www.w3.org/2000/svg" class="marchu_bomma" width="24" height="24" viewBox="0 0 24 24"><path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/></svg>Pop up</div>
+            <div class="salaha" id="s0">
+                <p>In what ever app you are, like in browser, ebook reader, etc.. just select a word by longclick, and then
+             select 'share' option (or three dots button also in 6.0+), then select 'search in Nakshatra' in list. a pop up will be opened there itself with meaning.
+            </p>
+                <p>You can also swype left/ right to move in alphabeticle order in that popup. and can click on hyperlinks, or can click on mic icon to pronounce etc.</p>
+            </div>
+        </div>
+
+
+        <div class="salaha_pette" id="sp1">
+            <div class="salaha_peru" id="spr1" onclick="kindaMarchu(this)"><svg xmlns="http://www.w3.org/2000/svg" class="marchu_bomma" width="24" height="24" viewBox="0 0 24 24"><path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/></svg>AppWidget</div>
+            <div class="salaha" id="s1">
+                <p>You can add "Nakshatra Word Of The Day" widget to your Homescreen by dragging it from widgets list.</p>
+                <p>It is a simple widget, which displays a new word from your dictionaries every day</p>
+                <p>you can click on word to view in app, and if you wish, you may ask to update word manually, when ever you want.</p>
+            </div>
+        </div>
+
+        <div class="salaha_pette" id="sp2">
+            <div class="salaha_peru" id="spr2" onclick="kindaMarchu(this)"><svg xmlns="http://www.w3.org/2000/svg" class="marchu_bomma" width="24" height="24" viewBox="0 0 24 24"><path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/></svg>Powerful Search</div>
+            <div class="salaha" id="s2">
+                <p>When you start typing a word in search bar, it displays all matches starting with what you typed, in dropdown list.</p>
+                <p>And DON'T worry about spelling mistakes. even though you type wrong spelling, Nakshatra will give results with corrected spelling in dropdown, and also many results which are very near in spelling to that wrongly spelt word. (displays with a question mark before the result)</p>
+                <p>This fuzzy search is very useful.</p>
+                <p>If there are no results for a searched word, then it will create result page, suggesting list of close words, and list of words starting with that word, and list of splitted words,etc.. so it will always give some useful result, even if no matches.</p>
+            </div>
+        </div>
+
+
+
+        <div class="salaha_pette" id="sp3">
+            <div class="salaha_peru" id="spr3" onclick="kindaMarchu(this)"><svg xmlns="http://www.w3.org/2000/svg" class="marchu_bomma" width="24" height="24" viewBox="0 0 24 24"><path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/></svg>Navigation</div>
+            <div class="salaha" id="s3">
+                <p>you can go to previous, next words in alphabetical order by swyping right, or left respectively on screen. or by clicking prev, next fading buttons also.</p>
+                <p>app supports hyperlinks too. so you can click on hyperlinks to go to linked word, as you do in web browser.</p>
+                <p>if a word is not a link, and ordinary.. long click on that, then along with "copy", "share", etc, there will be a popup at bottom, with options "search", and "pronounce".</p>
+                <p>You can go back to previously searched or clicked word by back button.</p>
+            </div>
+        </div>
+
+        <div class="salaha_pette" id="sp4">
+            <div class="salaha_peru" id="spr4" onclick="kindaMarchu(this)"><svg xmlns="http://www.w3.org/2000/svg" class="marchu_bomma" width="24" height="24" viewBox="0 0 24 24"><path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/></svg>Left Sliding Navigation Drawer</div>
+            <div class="salaha" id="s4">
+                <p>Slide from left edge of the screen, or click on jallikattu icon at top to open left action sliding bar.</p>
+                <p>Bookamark(/unBookmark), Random word, word of the day, etc.. you can do actions on them from here. </p>
+            </div>
+        </div>
+
+        <div class="salaha_pette" id="sp5">
+            <div class="salaha_peru" id="spr5" onclick="kindaMarchu(this)"><svg xmlns="http://www.w3.org/2000/svg" class="marchu_bomma" width="24" height="24" viewBox="0 0 24 24"><path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/></svg>Right Sliding Navigation Drawer</div>
+            <div class="salaha" id="s5">
+                <p>Nakshatra app will give many results, for each query, from all dictionaries in one page.</p>
+                <p>First there will be results of exact words from all dictionaries at the top. And after them, results of Related words or synonyms from all dictionaries(pulls from other dicts too) will be there.</p>
+                <p>You can slide from Right edge of the screen to view all Headers in same order of results in page, and click on them to scroll to those words in page.</p>
+            </div>
+        </div>
+
+        <div class="salaha_pette" id="sp6">
+            <div class="salaha_peru" id="spr6" onclick="kindaMarchu(this)"><svg xmlns="http://www.w3.org/2000/svg" class="marchu_bomma" width="24" height="24" viewBox="0 0 24 24"><path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/></svg>Bookmarks, History, Preferances, Themes...</div>
+            <div class="salaha" id="s6">
+                <p>From options menu on top right corner, you can go to Bookmarks, Preferances, History, and this entire help, etc.</p>
+                <p>There are three themes too, among which you can choose one, in Preferances.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+</body>
+</html>

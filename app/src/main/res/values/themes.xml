@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+    <style name="AppTheme.Light" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--item name="fontFamily">@font/nstr</item-->
+        <item name="searchViewStyle">@style/vetukuViewShaili</item>
+        <item name="windowActionBar">true</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="colorAccent">@color/classic_color_ascent</item>
+        <item name="android:unfocusedMonthDateColor">@color/kagita_nepathyam</item>
+        <item name="android:weekSeparatorLineColor">@color/dark_color_ascent</item>
+        <item name="android:weekNumberColor">@color/kagita_nighnundi_nepathyam</item>
+        <item name="colorPrimaryDark">@color/black</item>
+    </style>
+
+    <style name="AppTheme.Dark" parent="Theme.AppCompat.NoActionBar">
+        <!--item name="fontFamily">@font/nstr</item-->
+        <item name="searchViewStyle">@style/vetukuViewShaili</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="iconTint">@color/white</item>
+        <item name="colorAccent">@color/dark_color_ascent</item>
+        <item name="android:unfocusedMonthDateColor">@color/chikati_nepathyam</item>
+        <item name="android:weekSeparatorLineColor">?android:attr/colorForeground</item>
+        <item name="android:weekNumberColor">@color/chikati_nighnundi_nepathyam</item>
+    </style>
+
+    <style name="AppTheme.NT" parent="AppTheme.Dark">
+        <!--item name="fontFamily">@font/nstr</item-->
+        <item name="android:unfocusedMonthDateColor">@color/kagita_nepathyam</item>
+        <item name="android:weekSeparatorLineColor">@color/dark_color_ascent</item>
+    </style>
+
+    <style name="AppTheme.Classic" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--item name="fontFamily">@font/nstr</item-->
+        <item name="searchViewStyle">@style/vetukuViewShaili</item>
+        <item name="windowActionBar">true</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="colorAccent">@color/classic_color_ascent</item>
+        <item name="android:unfocusedMonthDateColor">@color/pata_nepathyam_bangaru</item>
+        <item name="android:weekSeparatorLineColor">@color/dark_color_ascent</item>
+        <item name="android:weekNumberColor">@color/pata_nighnundi_nepathyam</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorPrimary">@color/pata_color_primary</item>
+        <item name="android:windowBackground">@color/pata_color_primary</item>
+    </style>
+
+
+    <style name="InitTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/init</item>
+    </style>
+
+    <!--style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:textColorPrimary">@color/pata_colorPrimaryDark</item>
+        <item name="actionModeBackground">@color/pata_colorPrimary</item>
+        <item name="actionMenuTextColor">@color/pata_colorPrimaryDark</item>
+        <item name="android:background">@color/pata_colorPrimary</item>
+        <item name="logo">@drawable/jallikattu</item>
+    </style-->
+
+    <style name="AppTheme.AppBarOverlayLight" parent="ThemeOverlay.AppCompat.ActionBar">
+        <!--item name="logo">@drawable/jallikattu</item-->
+    </style>
+
+    <style name="AppTheme.AppBarOverlayDark" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="iconTint">@color/white</item>
+        <item name="tint">@color/pata_color_primary</item>
+        <item name="logo">@drawable/jallikattu_retro2_bgr2_pencil2_tone_map_sharpened</item>
+        <item name="android:background">@color/black_ab</item>
+        <item name="android:colorForeground">@color/pata_color_primary</item>
+        <item name="actionModeShareDrawable">@drawable/share</item>
+    </style>
+    
+    <style name="SelectionPopupTheme" parent="@android:style/Theme.Translucent.NoTitleBar">
+        <!--item name="fontFamily">@font/nstr</item-->
+        <item name="colorPrimary">@color/purti_paradarshaka</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+
+    <!--
+    android:unfocusedMonthDateColor: webView venuka nepathyaniki.
+    android:weekSeparatorLineColor: mundali, tarvati chodanam gurtulaki.
+    android:weekNumberColor: chettu chodanam nigh amsham nepathyamniki.
+    -->
+
+
+</resources>

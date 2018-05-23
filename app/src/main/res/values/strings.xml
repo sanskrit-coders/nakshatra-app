@@ -1,0 +1,159 @@
+<resources>
+    <string name="app_name">Nakshatra</string>
+    <string name="Nakshatra">Nakshatra</string>
+    <string name="enter_padam">Enter a word</string>
+    <string name="akaradi">in.bhumiputra.nakshatra.akaradi</string>
+    <string name="recents">recents</string>
+    <string name="transliterate">transliterate</string>
+    <string name="search">search</string>
+    <string name="pronounce_sm">pronounce</string>
+    <string name="wod_title">Nakshatra - Word of The Day</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="share">Share</string>
+    <string name="random">Random</string>
+    <string name="exit">Exit</string>
+    <string name="wod_cap">WOD</string>
+    <string name="pronounce">Pronounce</string>
+    <string name="history">History</string>
+    <string name="bookmarks">Bookmarks</string>
+    <string name="home">Home</string>
+    <string name="preferances">Preferances</string>
+    <string name="help">Help</string>
+    <string name="remove">Remove</string>
+    <string name="remove_all">Remove all</string>
+    <string name="no_items_selected">No items selected</string>
+    <string name="order_by">Order by</string>
+    <string name="chronological_desc">Chronological (descending)</string>
+    <string name="chronological_asc">Chronological (ascending)</string>
+    <string name="alphabeticle_desc">Alphabeticle (descending)</string>
+    <string name="alphabeticle_asc">Alphabeticle (ascending)</string>
+    <string name="tamizh">Tamizham</string>
+    <string name="english">English</string>
+    <string name="bulk_remove">Bulk remove</string>
+    <string name="remove_all__note">Alert! This action will remove all history from the list. (cannot be recovered!)</string>
+    <string name="remove_in_interval">Remove in interval</string>
+    <string name="remove_in_interval__note">This will remove history items in selected time interval. Note that this function is adoptive only when you ordered list in chronological order.(select in Order by option)</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="remove_interval">Remove interval</string>
+    <string name="hide">Hide</string>
+    <string name="headers">Headers</string>
+    <string name="related_words">Related words</string>
+    <string name="aw_suggestion">You can add  \"Nakshatra-Word of The Day\" widget to your homescreen. It is a simple widget, which displays some good word from your dictionaries every day. <br></br> you can click on them to view in app.you can also update words manually if you want, by clicking update icon. Presently manual update is possible only from widget.</string>
+    <string name="clear">clear</string>
+    <string name="close_words">Close words</string>
+    <string name="words_starting_with">Words starting with</string>
+    <string name="splitted_words">Splitted words</string>
+    <string name="sorry">Sorry</string>
+    <string name="no_result__before">No results found for</string>
+    <string name="no_result__after" />
+    <string name="copied_to_clipboard">Copied to clipboard.</string>
+    <string name="tts_not_supported">TTS doesn\'t support languages other than english as of now.</string>
+    <string name="pref_group_search__title"><![CDATA[Search & Search bar]]></string>
+    <string name="pref_reset_transliteration_mode__title">Reset transliteration button afer search</string>
+    <string name="pref_reset_transliteration_mode__summary">If you uncheck, transliteration button will be resetted only when you click again.</string>
+    <string name="pref_group_display__title">Display</string>
+    <string name="pref_auto_hide_prev_next__title">Fade away previous, next button controls</string>
+    <string name="pref_auto_hide_prev_next__summary">By default, icons will fade away in 5secs after result page displayed.</string>
+    <string name="pref_theme__title">Change theme</string>
+    <string name="pref_theme__dialog_title">Choose a theme</string>
+    <string name="pref_theme__summary">Current theme: Classic</string>
+    <string name="pref_theme__summary_part">Current theme</string>
+    <string name="close">Close</string>
+    <string name="next">Next</string>
+
+
+    <string name="help0">"In what ever app you are, like in browser, ebook reader, etc.. just select a word by longclicking, and then select 'share' option (or three dots button also in 6.0+), then select 'search in Nakshatra' in list of sharing options. a pop up will be opened there itself with meaning.
+
+You can also swype left/ right to move in alphabeticle order in that popup. and can click on hyperlinks, or can click on mic icon to pronounce etc.
+"</string>
+
+
+    <string name="help1">"You can add \"Nakshatra Word Of The Day\" widget to your Homescreen by dragging it from widgets list.
+
+It is a simple widget, which displays a new word from your dictionaries every day.
+
+you can click on it to view in app, and if you wish, you may ask to update that word manually, when ever you want."
+
+    </string>
+
+
+    <string name="help2">"When you start typing a word in search bar, it displays all matches starting with what you typed, in dropdown list.
+
+And DON'T worry about spelling mistakes. even though you type wrong spelling, Nakshatra will give results with corrected spelling in dropdown, and also many results which are very near in spelling to that wrongly spelt word. (displays with a question mark before the result)
+
+This fuzzy search is very useful.
+
+If there are no results for a searched word, then it will create result page, suggesting list of close words, and list of words starting with that word, and list of splitted words,etc.. so it will always give some useful result, even if no matches."
+
+    </string>
+
+
+
+    <string name="help3">"you can go to previous, next words in alphabetical order by swyping right, or left respectively on screen.
+
+app supports hyperlinks too. so you can click on hyperlinks to go to linked word, as you do in web browser.
+
+if a word is not a link, and ordinary.. long click on that, then along with "copy", "share", etc, there will be a popup at bottom, with options \"search\", and \"pronounce\".
+
+You can go back to previously searched or clicked word by back button."
+
+    </string>
+
+
+    <string name="help4">"Slide from left edge of the screen, or click on jallikattu icon at top to open left action sliding bar.
+
+Bookamark(/unBookmark), Random word, word of the day, etc.. you can do actions on them from here."
+
+    </string>
+
+
+    <string name="help5">"Nakshatra app will give many results, for each query, from all dictionaries in one page.
+
+First there will be results of exact words from all dictionaries at the top. And after them, results of Related words or synonyms from all dictionaries will be there.
+
+You can slide from Right edge of the screen to view drawer with all Headers in same order of results in page, and click on them to scroll to those words in page."
+
+    </string>
+
+
+    <string name="help6">"From options menu on top right corner, you can go to Bookmarks, Preferances, History, and this entire help, etc.
+
+There are three themes too, among which you can choose one, in Preferances."
+
+    </string>
+
+    <string name="help_title0">"Pop up"</string>
+    <string name="help_title1">"AppWidget"</string>
+    <string name="help_title2">"Powerful Search"</string>
+    <string name="help_title3">"Navigation"</string>
+    <string name="help_title4">"Left Sliding Navigation Drawer"</string>
+    <string name="help_title5">"Right Sliding Navigation Drawer"</string>
+    <string name="help_title6">"Bookmarks, History, Preferances, Themes…"</string>
+    <string name="rate_me_dialog">Hope Nakshatra is helpful to you. if it is, please consider to rate us. It is a form of supporting us, and encorages us to build more tools for our indian languages.</string>
+    <string name="rate_now">Rate now</string>
+    <string name="dont_ask_again">Don\'t ask again</string>
+    <string name="latter">Later</string>
+    <string name="pop_up_title">Search in Nakshatra</string>
+    <string name="share_word">Share word</string>
+    <string name="share_all">Share entire text</string>
+    <string name="copy_word">Copy word</string>
+    <string name="copy_all">Copy all text</string>
+    <string name="share_suggestion">instead you can select text in desired range by long clicking, and selecting range, or by pressing copy icon, and then do what ever you want.</string>
+    <string name="pref_group_dictionaries__title">Dictionaries</string>
+    <string name="pref_indices_loading_mode__dialog_title">Choose loading mode</string>
+    <string name="pref_indices_loading_mode__title">Dictionary loading mode</string>
+    <string name="pref_indices_loading_mode__summary">Current mode:</string>
+    <string name="wod">Word of the day</string>
+    <string name="no_dictionaries_hint">No stardict dictionary files found in dictdata/ folder. keep dictionary files in dictdata/ folder and restart app.</string>
+    <string name="sdu_app_link_text">    If you want indian language dictionary files, some dictionaries are maintained at sanskritcoders project. you can install those dictionaries from \'stardict dictionary updater\' app. click on this text to install that app.</string>
+    <string name="select_dictionaries_to_index">Select dictionaries to index</string>
+    <string name="proceed">Proceed</string>
+    <string name="skip">Skip</string>
+    <string name="indexing">Indexing in progress…</string>
+    <string name="model_text">Some text</string>
+    <string name="pref_reindex_all_dictionaries__title">Reindex all dictionaries</string>
+    <string name="pref_reindex_all_dictionaries__summary">This will reindex all dictionaries. deletes all old indices.</string>
+
+
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/actionbar_box"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="vertical"
+        >
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/pref_actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/AppTheme.AppBarOverlayDark"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_alignBottom="@id/hst_actionbar"
+            android:background="@drawable/shadow"
+            />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/pref_pref_box"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:context="in.bhumiputra.nakshatra.PreferancesActivity"
+        />
+</LinearLayout>

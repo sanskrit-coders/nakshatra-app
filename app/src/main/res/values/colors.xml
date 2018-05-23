@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="classic_color_primary">#F8ECC2</color>
+    <color name="classic_color_primary_dark">#000000</color>
+    <color name="classic_color_ascent">#5a5a5a</color>
+    <color name="classic">#E9E3CB</color>
+    <color name="white">#FFFFFF</color>
+    <color name="grey">#5a5a5a</color>
+    <color name="black">#000000</color>
+    <color name="suggestion_bg">#E9E3CB</color>
+    <color name="gd_bg">#fefdeb</color>
+    <color name="link">#2f4f4f</color>
+    <color name="seperator">@android:color/transparent</color>
+
+    <color name="classic_text_color_primary">#000000</color>
+
+    <color name="light_color_primary">#FFFFFF</color>
+    <color name="light_color_primary_dark">#FF757575</color>
+
+    <color name="material_white">#FFF5F5F5</color>
+    <color name="kagita_nepathyam">#fffdf6</color>
+    <color name="kagita_nighnundi_nepathyam">#f5f2ef</color>
+    <color name="black_ab">#FF212121</color>
+    <color name="dark_color_ascent">#757575</color>
+
+    <color name="pata_nepathyam_bangaru">#fefdeb</color>
+    <color name="pata_nighnundi_nepathyam">#fffde7</color>
+    <color name="pata_color_primary">#FFFFFDE7</color>
+    <color name="rojuko_padam_aw_shirshika">#8a000000</color>
+    <color name="primary_material_light">#fffde7</color>
+
+    <color name="chikati_nepathyam">#111111</color>
+    <color name="chikati_nighnundi_nepathyam">#222222</color>
+    <color name="primary_material_light_1">#febdeb</color>
+
+
+    <color name="kagita_paradarshaka">#33fffdf6</color>
+    <color name="pata_paradarshaka">#33fefdeb</color>
+    <color name="chikati_paradarshaka">#33111111</color>
+    <color name="paradarshaka">#aa000000</color>
+    <color name="purti_paradarshaka">#00000000</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#00FF00</color>
+    <color name="blue">#0000FF</color>
+</resources>

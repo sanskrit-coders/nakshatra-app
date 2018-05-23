@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fri1_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fri1_no_dictionaries_text"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="@color/red"
+        android:text="@string/no_dictionaries_hint"
+        android:layout_marginBottom="25dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fri1_sdu_app_link"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/link"
+        android:text="@string/sdu_app_link_text"
+        />
+
+</LinearLayout>

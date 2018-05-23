@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nks_menu_transliterate"
+        android:icon="@drawable/transliteration_inactive"
+        android:title="@string/transliterate"
+        android:checkable="true"
+        app:showAsAction="never"
+        android:visible="false"
+        />
+    <item
+        android:id="@+id/nks_menu_search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        android:icon="@drawable/search"
+        app:showAsAction="always"
+        android:title="@string/enter_padam"
+        />
+    <item
+        android:id="@+id/nks_menu_home"
+        android:icon="@drawable/home"
+        app:showAsAction="never"
+        android:title="@string/home"
+        />
+    <item
+        android:id="@+id/nks_menu_recents"
+        android:icon="@drawable/menu_recents"
+        app:showAsAction="never"
+        android:title="@string/recents"
+        />
+    <item
+        android:id="@+id/nks_menu_bookmarks"
+        android:title="@string/bookmarks"
+        android:icon="@drawable/bookmark_filled"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/nks_menu_history"
+        android:icon="@drawable/history"
+        android:title="@string/history"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/nks_menu_preferances"
+        android:icon="@drawable/preferances"
+        android:title="@string/preferances"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/nks_menu_help"
+        android:icon="@drawable/help"
+        android:title="@string/help"
+        app:showAsAction="never"
+        />
+
+</menu>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref_theme__list">
+        <item>@string/theme_classic</item>
+        <item>@string/theme_light</item>
+        <item>@string/theme_dark</item>
+    </string-array>
+
+    <string name="theme_classic">Classic</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+
+    <string-array name="pref_theme__values">
+        <item>classic</item>
+        <item>light</item>
+        <item>dark</item>
+    </string-array>
+
+    <string-array name="pref_indices_loading_mode__list">
+        <!--item>@string/vidham_0</item-->
+        <item>@string/mode_1</item>
+        <!--item>@string/vidham_2</item-->
+        <item>@string/mode_3</item>
+    </string-array>
+
+    <string name="mode_0">mode0</string>
+    <string name="mode_1">mode1 (default)</string>
+    <string name="mode_2">mode2</string>
+    <string name="mode_3">mode3</string>
+
+    <string-array name="pref_indices_loading_mode__values">
+        <!--item>0</item-->
+        <item>1</item>
+        <!--item>2</item-->
+        <item>3</item>
+    </string-array>
+
+
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nandi1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:id="@+id/descr_box"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="?android:unfocusedMonthDateColor"
+        >
+
+        <in.bhumiputra.nakshatra.JaalaView
+            android:id="@+id/descr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:focusable="true"
+            />
+
+        <RelativeLayout
+            android:id="@+id/descr_nav_box"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <ImageView
+                android:id="@+id/descr_nav_prev"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/left_arrow"
+                android:tint="?android:weekSeparatorLineColor"
+                android:scaleType="fitXY"
+                />
+            <ImageView
+                android:id="@+id/descr_nav_next"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/right_arrow"
+                android:tint="?android:weekSeparatorLineColor"
+                android:scaleType="fitXY"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

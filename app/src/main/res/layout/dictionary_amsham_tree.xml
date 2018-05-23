@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/charitra_shira_amsham"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center_vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:paddingStart="13dp"
+        android:paddingEnd="2dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="italic|bold"
+        android:textSize="15sp"
+        android:gravity="center_vertical"
+        android:id="@+id/vargamu"
+        android:layout_gravity="start"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:background="?android:weekNumberColor"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:src="@drawable/horizental_line"
+        />
+
+</LinearLayout>

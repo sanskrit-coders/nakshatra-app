@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<searchable xmlns:android="http://schemas.android.com/apk/res/android"
+    android:label="@string/Nakshatra"
+    android:hint="@string/enter_padam"
+    android:searchSuggestAuthority="@string/akaradi"
+    android:searchSuggestThreshold="1"
+    >
+</searchable>

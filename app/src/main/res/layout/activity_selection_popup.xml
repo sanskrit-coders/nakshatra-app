@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/spu_layout"
+    android:layout_width="match_parent"
+    android:layout_height="350dp"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    tools:context="in.bhumiputra.nakshatra.SelectionPopUp"
+    >
+
+    <RelativeLayout
+        android:id="@+id/spu_box"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="10dp"
+        >
+        <in.bhumiputra.nakshatra.JaalaView
+            android:id="@+id/spu_descr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:scrollbars="none"
+            />
+        <ImageView
+            android:id="@+id/spu_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/exit"
+            android:tint="@color/red"
+            android:layout_alignParentEnd="true"
+            />
+        <ImageView
+            android:id="@+id/spu_ffull_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/full_screen"
+            android:tint="@color/red"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5sp"
+            android:layout_below="@id/spu_close"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

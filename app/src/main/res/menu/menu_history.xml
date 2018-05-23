@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item
+        android:id="@+id/hst_menu_order_by"
+        android:title="@string/order_by"
+        android:icon="@drawable/order_by"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/hst_menu_bulk_remove"
+        android:title="@string/bulk_remove"
+        android:icon="@drawable/delete_all"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/hst_menu_remove"
+        android:title="@string/remove"
+        android:icon="@drawable/delete_cross"
+        app:showAsAction="always"
+        />
+    <!-- items for debugging...
+         should be removed in final product.
+    -->
+
+</menu>
