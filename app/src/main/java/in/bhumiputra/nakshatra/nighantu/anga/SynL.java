@@ -211,6 +211,12 @@ public class SynL implements Syn {
                 if(range!= null) {
                     range= new LongTuple(range.first, (lastOne.first +lastOne.second -range.first));
                 }
+                else {
+                    LongTuple veryFirstOne= fLB.get(keys[0]);
+                    if(veryFirstOne!= null) {
+                        range = new LongTuple(veryFirstOne.first, (lastOne.first + lastOne.second - veryFirstOne.first));
+                    }
+                }
             }
         }
         return range;

@@ -586,8 +586,9 @@ public class HistoryActivity extends AppCompatActivity {
             inHolder.padamView.setOnClickListener(padamClickListener);
 
             boolean isChecked= selections.contains(padam);
-            inHolder.selectionView.setChecked(isChecked);
+            //inHolder.selectionView.setChecked(isChecked);
             inHolder.selectionView.setOnCheckedChangeListener(selectionChangeListener);
+            inHolder.selectionView.setChecked(isChecked);
 
             return innerRow;
         }

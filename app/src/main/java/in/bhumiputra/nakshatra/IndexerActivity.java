@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Environment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -16,9 +17,6 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,7 +32,6 @@ import java.io.FilenameFilter;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
@@ -60,6 +57,7 @@ public class IndexerActivity extends AppCompatActivity {
     List<DictionaryDetails> toBeIndexed;
     List<DictionaryDetails> selected;
     List<String> indexStatuses;
+    DictionarySelectionFragment dsf;
 
     boolean dictionariesAvailable= true;
 
@@ -145,6 +143,13 @@ public class IndexerActivity extends AppCompatActivity {
     @Override
     public void onDestroy() {
         this.dbHelper.close();
+        /*Thread newThread= new Thread(new Runnable() {
+            @Override
+            public void run() {
+                getContentResolver().update(Uri.parse(AKARADISTR+ "/update/db/"), null, null, null);
+            }
+        });
+        newThread.run();*/
         getContentResolver().update(Uri.parse(AKARADISTR+ "/update/db/"), null, null, null);
         super.onDestroy();
 
@@ -608,62 +613,62 @@ public class IndexerActivity extends AppCompatActivity {
         }
     }
 
-    public void startIndexingSelectedDictionaries() {
+    public void startIndexingSelectedDictionaries(DictionarySelectionFragment df) {
+        dsf= df;
         if(selected.size()== 0) {
             this.finish();
             overridePendingTransition(0, 0);
             return;
         }
-
-        indexStatuses= new ArrayList<>();
-        for(int i= 0; i< selected.size(); i++) {
-            indexStatuses.add("Indexing...");
-        }
-
-        Fragment prevFragment= getSupportFragmentManager().findFragmentByTag("df");
-        FragmentTransaction ft= getSupportFragmentManager().beginTransaction();
-        if(prevFragment!= null) {
-            ft.remove(prevFragment);
-        }
-        IndexingProgressFragment indexingProgressFragment= new IndexingProgressFragment();
-        ft.add(R.id.ind_fragment_holder, indexingProgressFragment, "df");
-        ft.commit();
-        indexWithFeedBack(selected, idb, indexingProgressFragment);
-        this.finish();
-        overridePendingTransition(0, 0);
+        indexStatuses= dsf.statuses;
+        IndexTaskAsync it= new IndexTaskAsync();
+        it.execute();
     }
 
-    public void onIndexingProgressFragmentViewCreated(IndexingProgressFragment ipf)  { //not used as of now.
-        indexWithFeedBack(selected, idb, ipf);
-        this.finish();
-        overridePendingTransition(0, 0);
-    }
+    private class IndexTaskAsync extends AsyncTask<Void, Integer, Void> {
 
-    private void indexWithFeedBack(List<DictionaryDetails> tSelected, SQLiteDatabase tDb, IndexingProgressFragment feedbackFragment) {
-        tDb.beginTransaction();
-        try {
-            int nth= 0;
-            for(DictionaryDetails tDetail: tSelected) {
-                createIndices(tDetail, false);
-                File synF= new File(tDetail.directory, tDetail.name + ".syn");
-                if(synF.canRead()) {
-                    createIndices(tDetail, true);
+        @Override
+        protected Void doInBackground(Void... voids) {
+            idb.beginTransaction();
+            try {
+                int nth= 0;
+                for(DictionaryDetails tDetail: selected) {
+                    createIndices(tDetail, false);
+                    File synF= new File(tDetail.directory, tDetail.name + ".syn");
+                    if(synF.canRead()) {
+                        createIndices(tDetail, true);
+                    }
+                    idb.execSQL("INSERT INTO dictionaries (path, hash, night, idxt, ifot, synt)" +
+                            "VALUES(" +
+                            "'"+ tDetail.path + "'"+ "," +
+                            tDetail.path.hashCode()+ "," +
+                            tDetail.night+ "," +
+                            tDetail.idxt+ "," +
+                            tDetail.ifot+ "," +
+                            tDetail.synt+ ");"
+                    );
+                    Integer[] completed= {nth};
+                    nth++;
+                    publishProgress(completed);
                 }
-                indexStatuses.set(nth++, "Done!");
-                feedbackFragment.refresh();
-                tDb.execSQL("INSERT INTO dictionaries (path, hash, night, idxt, ifot, synt)" +
-                        "VALUES(" +
-                        "'"+ tDetail.path + "'"+ "," +
-                        tDetail.path.hashCode()+ "," +
-                        tDetail.night+ "," +
-                        tDetail.idxt+ "," +
-                        tDetail.ifot+ "," +
-                        tDetail.synt+ ");"
-                );
+                idb.setTransactionSuccessful();
+            } finally {
+                idb.endTransaction();
             }
-            tDb.setTransactionSuccessful();
-        } finally {
-            tDb.endTransaction();
+            return null;
+        }
+
+        @Override
+        protected void onProgressUpdate(Integer... completed) {
+            indexStatuses.set(completed[0], "Done!");
+            dsf.refreshStatuses();
+        }
+
+        @Override
+        protected void onPostExecute(Void voids) {
+            IndexerActivity.this.finish();
+            overridePendingTransition(0, 0);
         }
     }
+
 }

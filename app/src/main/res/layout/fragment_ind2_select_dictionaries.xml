@@ -21,6 +21,41 @@
         android:layout_height="4dp"
         android:background="@drawable/shadow"
         />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fri2_select_all_block"
+        android:padding="5dp"
+        >
+        <CheckBox
+            android:id="@+id/fri2_select_all_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            />
+        <TextView
+            android:id="@+id/fri2_select_all_tv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:text="@string/select_all"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:padding="3dp"
+            />
+        <TextView
+            android:id="@+id/fri2_selected_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:text="@string/model_text"
+            android:padding="5dp"
+            />
+    </LinearLayout>
     <ListView
         android:layout_width="match_parent"
         android:layout_height="0dp"

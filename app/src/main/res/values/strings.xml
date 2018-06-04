@@ -154,6 +154,10 @@ There are three themes too, among which you can choose one, in Preferances."
     <string name="model_text">Some text</string>
     <string name="pref_reindex_all_dictionaries__title">Reindex all dictionaries</string>
     <string name="pref_reindex_all_dictionaries__summary">This will reindex all dictionaries. deletes all old indices.</string>
+    <string name="select_all">Select all</string>
+    <string name="drawer_opened">drawer opened</string>
+    <string name="drawer_closed">drawer closed</string>
+    <string name="drawer_help_dialog">There are two drawers. Left and Right. Left drawer contains some tools like bookmarking, sharing, WOD, etc. whereas right drawer consists of quick links to headwords from differant dictionaries in result page. you need not to scroll till a dictionary in page. instead you can click on link in right side drawer to automatically scroll to that position.</string>
 
 
 </resources>

@@ -22,7 +22,7 @@ import java.util.TreeSet;
  * "L" in IdxL represents List, i.e it loads entire idx file to a datastructue {@link SortedListsMap SortedListMap<String, IntTuple>}.
  * we cannot use normal {@link Map} or a{@link java.util.List} for fallowing reasons.
  * <ul>
- * <li>idx file can contain single word may times, pointing to differant offset in dict file. and thus not unique.</li>
+ * <li>idx file can contain single word many times, pointing to differant offset in dict file. and thus not unique.</li>
  * <li>And we need to address an idx entry by it's number.(for supporting syn file)</li>
  * <li>we need mapping behaviour too along with index behaviour, and repetitions should supoorted</li>
  * </ul>
@@ -275,6 +275,12 @@ public class IdxL implements Idx {
                 LongTuple lastOne= fLB.get(keys[keys.length-1]);
                 if(range!= null) {
                     range= new LongTuple(range.first, (lastOne.first +lastOne.second -range.first));
+                }
+                else {
+                    LongTuple veryFirstOne= fLB.get(keys[0]);
+                    if(veryFirstOne!= null) {
+                        range = new LongTuple(veryFirstOne.first, (lastOne.first + lastOne.second - veryFirstOne.first));
+                    }
                 }
             }
         }

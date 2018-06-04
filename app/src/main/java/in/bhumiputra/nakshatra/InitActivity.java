@@ -22,7 +22,7 @@ import static in.bhumiputra.nakshatra.NighantuProvider.AKARADISTR;
 public class InitActivity extends AppCompatActivity {
     static final String[] PERMISSIONS = {WRITE_EXTERNAL_STORAGE};
     static final int REQ_CODE1= 123;
-    static final String tag= "modalu";
+    private static final String tag= "modalu";
     private Uri homeUri = Uri.parse("file:///android_asset/Sahayam.html");
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -17,4 +17,5 @@ public class PreferanceCentral {
     public static final String pref_rate_status= "rate_status";
     public static final String pref_rate_dialog_period= "rate_dialog_period";
     public static final String pref_reindex_all_dictionaries= "reindex_all_dictionaries";
+    public static final String pref_should_simulate_drawer_help_dialog= "should_simulate_drawer_help_dialog";
 }

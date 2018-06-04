@@ -23,6 +23,7 @@ import android.os.AsyncTask;
 import android.preference.PreferenceManager;
 import android.speech.tts.TextToSpeech;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.SearchView;
@@ -75,6 +76,8 @@ public class NakshatraActivity extends AppCompatActivity {
     DrawerLayout navigationD;
     LinearLayout navigationL;
     LinearLayout treeL;
+
+    //ActionBarDrawerToggle abdt;
 
     ListView tree;
     TreeAdapter treeAdapter;
@@ -130,6 +133,8 @@ public class NakshatraActivity extends AppCompatActivity {
         Toolbar actionBarToolBar= findViewById(R.id.actionBar);
         initToolBar(actionBarToolBar);
 
+        //initActionBarDrawerToggle();
+
         descrView = findViewById(R.id.descr);
         WebBackForwardList mvjb= descrView.restoreState(savedInstanceState); //NOTE...
         initJaalaView(descrView);
@@ -167,6 +172,11 @@ public class NakshatraActivity extends AppCompatActivity {
         showHelpDialog();
         showRateDialog();
     }
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        //abdt.syncState();
+    }
 
     @Override
     public void onConfigurationChanged(Configuration nConfig) {
@@ -176,8 +186,10 @@ public class NakshatraActivity extends AppCompatActivity {
         svWidth= dm.widthPixels;
 
         if(searchView != null) {
-            searchView.setMaxWidth((int) Math.floor(svWidth * 0.75));
+            searchView.setMaxWidth((int) Math.floor(svWidth * 0.78));
         }
+
+        //abdt.onConfigurationChanged(nConfig);
     }
 
     void handleDisplay() {
@@ -242,8 +254,21 @@ public class NakshatraActivity extends AppCompatActivity {
 
         setSupportActionBar(tb);
 
+        //getSupportActionBar().setHomeButtonEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         return true;
     }
+
+    /*private void initActionBarDrawerToggle() {
+        abdt= new ActionBarDrawerToggle(this,
+                navigationD,
+                R.string.drawer_opened,
+                R.string.drawer_closed
+                );
+
+        navigationD.addDrawerListener(abdt);
+
+    }*/ ///TODO!!!
 
     public boolean initJaalaView(final JaalaView vv) {
 
@@ -369,6 +394,9 @@ public class NakshatraActivity extends AppCompatActivity {
 
     public void buildTree() {
         treeAdapter.swapTree(domTree, dictionaryNames);
+        if(dictionaryNames.first.size()+ dictionaryNames.second.size() >= 2) {
+            showDrawerSimulateDialog();
+        }
     }
 
 
@@ -421,6 +449,26 @@ public class NakshatraActivity extends AppCompatActivity {
             DialogFragment rateDialog= new RateDialog();
             rateDialog.show(ft, "dialog");
         }
+    }
+
+    private void showDrawerSimulateDialog() {
+        SharedPreferences pref= PreferenceManager.getDefaultSharedPreferences(this);
+        boolean should= pref.getBoolean(PreferanceCentral.pref_should_simulate_drawer_help_dialog, true);
+
+        if(!should) {
+            return;
+        }
+        navigationD.openDrawer(treeL);
+        navigationD.openDrawer(navigationL);
+
+        android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        android.support.v4.app.Fragment prevFragment = getSupportFragmentManager().findFragmentByTag("dialog");
+        if (prevFragment != null) {
+            ft.remove(prevFragment);
+        }
+        android.support.v4.app.DialogFragment drawerSimulateDialog= new DrawerSimulateDialog();
+        drawerSimulateDialog.show(ft, "dialog");
+        pref.edit().putBoolean(PreferanceCentral.pref_should_simulate_drawer_help_dialog, false).apply();
     }
 
     @Override
@@ -483,7 +531,7 @@ public class NakshatraActivity extends AppCompatActivity {
         svWidth= dm.widthPixels;
 
         searchView = (SearchView) menu.findItem(R.id.nks_menu_search).getActionView();
-        searchView.setMaxWidth((int) Math.floor(svWidth*0.75));
+        searchView.setMaxWidth((int) Math.floor(svWidth*0.78));
         initSearchView(searchView);
 
         suggestionsView = searchView.findViewById(android.support.v7.appcompat.R.id.search_src_text);
@@ -528,7 +576,7 @@ public class NakshatraActivity extends AppCompatActivity {
             public void onFocusChange(View v, boolean hasFocus) {
                 if(!hasFocus) {
                     NakshatraActivity.this.hideIme(v);
-                    /*searchView.setMaxWidth((int)Math.floor(svWidth*0.75));
+                    /*searchView.setMaxWidth((int)Math.floor(svWidth*0.78));
                     menu_lm.setShowAsAction(SHOW_AS_ACTION_NEVER);
                     if(pref_auto_toggle_transliterate) {
                         //transliterate = false; TODO!!!
@@ -558,6 +606,9 @@ public class NakshatraActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        /*if (abdt.onOptionsItemSelected(item)) {
+            return true;
+        }*/
         switch(item.getItemId()) {
             case R.id.nks_menu_recents: {
                 String charitra= recentHistory();
